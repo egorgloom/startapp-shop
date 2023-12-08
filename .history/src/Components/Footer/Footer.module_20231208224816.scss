@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Open+Sans:wght@300;400;500;600;700&display=swap');
+@import './../../styles/variables.scss';
+
+.footer {
+    width: 100%;
+    padding: 0 50px;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 100%;
+
+    a {
+        color: $lightBlack;
+    }
+
+    h3 {
+        font-size: $fs24;
+    }
+
+    .footerBlockInfo {
+        display: flex;
+        gap: 20px;
+
+        .usefulLinksUl, .lorem {
+            padding-top: 20px;
+        }
+
+        .footerLinks {
+           display: flex;
+           align-items: center;
+           justify-content: flex-start;
+           gap: 20px;
+        }
+
+    }
+
+    .developer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding-top: 10px;
+    }
+}
