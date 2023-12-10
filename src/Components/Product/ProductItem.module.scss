@@ -1,0 +1,55 @@
+
+@import '../../styles/variables.scss';
+
+.productItem {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    gap: 20px;
+    width: calc((100% / 3) - 20px );
+    border: 1px solid $lightBlack;
+    border-radius: 10px;
+
+
+
+    a {
+        height: 300px;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+
+        h3 {
+            font-size: $fs18;
+            color: $lightBlack;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    
+        img {
+            margin: 0 auto;
+            width: 30%;
+            height: 40%;
+        }
+    
+        p {
+            color: $lightBlack;
+            font-weight: 600;
+            font-size: $fs20;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -16,8 +16,8 @@ const Header: FC<IHeader> = () => {
             <NavLink to={'/'}><img src={LOGO} alt={LOGO} className={styles.logo} /></NavLink>
             <div className={styles.userPanel}>
                 <div className={styles.cartUser}>
-                    <Link to={'/cart'}>
-                        <GrCart />
+                    <Link to={'cart'}>
+                        <GrCart style={{width: '40px', height: '40px'}}/>
                     </Link>
                 </div>
             </div>

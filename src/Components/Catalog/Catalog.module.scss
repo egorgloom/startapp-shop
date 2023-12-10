@@ -2,16 +2,13 @@
 @import './../../styles/variables.scss';
 
 .catalogContainer {
-
-    height: 800px;
+    padding: 20px;
     color: $white;
     display: flex;
-    flex-direction: column;
     gap: 20px;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-
-
-
+    flex-wrap: wrap;
+    margin-bottom: 50px;
 }
 
