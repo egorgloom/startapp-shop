@@ -2,6 +2,8 @@ import { FC } from 'react';
 
 import { FaPlus, FaMinus, FaRegWindowClose } from 'react-icons/fa';
 
+import { Link } from 'react-router-dom';
+
 import { useActions } from '../../hooks/useActions';
 
 import { ICart } from '../../interfaces/interfaces';
@@ -23,8 +25,10 @@ const CartItem: FC<ICartItem> = ({ elem }) => {
 
     return (
         <div className={cl.cartItem}>
+            <Link to={`/product/${elem.id}`}>
             <img src={elem.image} alt="productImage" />
             <span className={cl.description}>{elem.description}</span>
+            </Link>
             <div className={cl.quantity}>
                 <FaMinus
                     className={cl.minus}
