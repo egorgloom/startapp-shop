@@ -26,7 +26,8 @@ const Search: FC= () => {
             />
 
             <span>
-                {search && <div className={cl.searchBlock}>
+                {search && 
+                <div className={cl.searchBlock}>
                     {handleSearch?.length ?
                         handleSearch?.map((item: IProduct) =>
                             <Link to={`product/${item.id}`}
@@ -37,7 +38,7 @@ const Search: FC= () => {
                                 <h5>{item.title}</h5>
                             </Link>
                         )
-                        : <div>no result</div>
+                        : <div className={cl.item}>no result</div>
                     }
                 </div>
                 }
