@@ -1,7 +1,6 @@
 import { FC } from 'react';
 
-import { FaPlus, FaMinus} from 'react-icons/fa';
-import { IoMdClose } from "react-icons/io";
+import { FaPlus, FaMinus, FaRegWindowClose } from 'react-icons/fa';
 
 import { Link } from 'react-router-dom';
 
@@ -40,7 +39,7 @@ const CartItem: FC<ICartItem> = ({ elem }) => {
                     onClick={() => changeQuantity(elem, Math.max(1, elem.quantity + 1))} />
             </div>
             <span className={cl.price}>{Math.ceil((elem.price * elem.quantity))}$</span>
-            <IoMdClose
+            <FaRegWindowClose
             style={{cursor: 'pointer', width: '20px', height: '20px', marginBottom: '50px'}}
                 onClick={() => removeToCart({id : elem.id})}
             />
