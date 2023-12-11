@@ -1,15 +1,18 @@
 import { FC } from 'react';
+
 import { useParams } from 'react-router-dom';
+
 import { useGetProductQuery } from '../../features/apiSlice';
+
 import { useActions } from '../../hooks/useActions';
+
 import Button from '../../UI/Button/Button';
 import Loading from '../../UI/Button/Loading/Loading';
 
 import cl from './SingleProduct.module.scss'
 
-interface ISingleProduct { }
 
-const SingleProduct: FC<ISingleProduct> = () => {
+const SingleProduct: FC = () => {
 
   const { id } = useParams()
 

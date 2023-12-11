@@ -1,0 +1,39 @@
+@import './../../styles/variables.scss';
+
+.searchInput {
+    font-size: $fs20;
+    color: $lightBlack;
+    padding: 5px;
+    border-style: none;
+    width: 40%;
+
+    &::placeholder {
+        color: gray;
+    }
+}
+
+span {
+    .searchBlock {
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        background-color: white;
+        padding: 7px;
+        gap: 15px;
+        left: 31%;
+
+        .item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            color: grey;
+
+            img {
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}

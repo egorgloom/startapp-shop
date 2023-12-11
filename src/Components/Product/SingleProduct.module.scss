@@ -40,7 +40,7 @@
             border: 1px solid green;
             padding: 10px;
             border-radius: 10px;
-            width: 30%;
+            width: 40%;
         }
 
         .rating {
@@ -48,4 +48,37 @@
             font-weight: 500;
         }
     }
+}
+
+
+@media (max-width: 360px) { 
+    .singleProduct {
+        padding: 20px 20px;
+        width: 100%;
+        img {
+            width: 50%;
+            height: 30%;
+        }
+        .descriptionBlock {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            h3 {
+                font-size: $fs18;
+            }
+    
+            .description {
+                font-size: $fs16;
+
+            }
+    
+            .price {
+                font-size: $fs20;
+                width: 80%;
+            }
+        }
+    }
+     
+
+
 }

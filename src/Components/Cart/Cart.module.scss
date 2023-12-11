@@ -1,0 +1,33 @@
+@import './../../styles/variables.scss';
+
+.cartBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 800px;
+    padding: 20px;
+
+    .actions {
+        display: flex;
+        justify-content: space-between;
+
+        .total {
+            font-size: $fs24;
+            font-weight: 600;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .cartBlock {
+        min-height: 400px;
+
+        .actions {
+    
+            .total {
+                font-size: $fs18;
+                font-weight: 600;
+            }
+        }
+    }
+}

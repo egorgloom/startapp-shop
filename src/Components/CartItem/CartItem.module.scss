@@ -1,0 +1,73 @@
+@import './../../styles/variables.scss';
+
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+
+
+    img {
+        width: 10%;
+        height: 10%;
+    }
+
+    .description {
+        font-size: $fs12;
+        width: 30%;
+        color: $lightBlack;
+    }
+
+    .quantity { 
+        display: flex;
+        gap: 7px;
+
+        .minus, .plus {
+            width: 20%;
+            cursor: pointer;
+        }
+    }
+
+    .price {
+        font-size: $fs20;
+        color: $lightBlack;
+    }
+}
+
+@media (max-width: 360px) { 
+
+    
+.cartItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+
+
+    img {
+        width: 10%;
+        height: 10%;
+    }
+
+    .description {
+        font-size: $fs10;
+        width: 30%;
+        color: $lightBlack;
+    }
+
+    .quantity { 
+        display: flex;
+        gap: 7px;
+
+        .minus, .plus {
+            width: 20%;
+            cursor: pointer;
+        }
+    }
+
+    .price {
+        font-size: $fs20;
+        color: $lightBlack;
+    }
+}
+}

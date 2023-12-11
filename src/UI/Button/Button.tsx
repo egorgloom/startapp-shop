@@ -5,7 +5,8 @@ import cl from './Button.module.scss'
 interface IButton {
     children?: React.ReactNode,
     title: string,
-    onClick: ()=> void
+    onClick?: ()=> void,
+    disabled? : boolean
 }
 
 const Button: FC<IButton> = ({children, ...props}) => {

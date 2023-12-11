@@ -1,9 +1,8 @@
 export interface IProduct {
     quantity: number;
-
-    id?: number ,
+    id: number ,
     title?: string,
-    price?: number,
+    price: number,
     description?:string,
     image?: string,
     rating?: IRating,
@@ -13,3 +12,5 @@ export interface IRating {
     rate?: string,
     count?: number,
 }
+
+export type ICart = Omit<IProduct, 'rating'>

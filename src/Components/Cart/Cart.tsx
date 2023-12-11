@@ -2,15 +2,39 @@ import { FC } from 'react';
 
 import { useTypedSelector } from '../../hooks/useTypedSelector';
 
-interface ICart {}
+import { ICart } from '../../interfaces/interfaces';
 
-const Cart: FC<ICart> = () => {
+import cl from './Cart.module.scss'
 
-  const { cart } = useTypedSelector(state => state)
-  console.log(cart)
+import CartItem from '../CartItem/CartItem';
+
+import Button from '../../UI/Button/Button';
+
+import { sumPrice } from '../../utils/common';
+
+
+const Cart: FC = () => {
+
+  const cart = useTypedSelector(state => state.cart.cart);
+
   return (
-    <div>
-        CArt
+    <div className={cl.cartBlock}>
+
+      {cart.length ?
+        cart.map((elem: ICart) => <CartItem elem={elem} key={elem.id} />
+        )
+        : <div>Cart is empty</div>}
+
+
+      <div className={cl.actions}>
+        <div className={cl.total}>
+          TOTAL PRICE:{" "}
+          <span>
+            {sumPrice(cart.map(({ price, quantity }) => Math.ceil((price * quantity))))}$
+          </span>
+        </div>
+        <Button title='Proceed to checkout' disabled={!cart.length ? true : false} />
+      </div>
     </div>
   );
 };

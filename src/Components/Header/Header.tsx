@@ -1,27 +1,35 @@
 import { FC } from 'react';
+
 import { NavLink, Link } from 'react-router-dom';
 
 import LOGO from '../../images/ojjo.svg'
 
 import { GrCart } from "react-icons/gr";
 
-import styles from './Header.module.scss'
+import cl from './Header.module.scss'
+
+import Search from '../Search/Search';
+
+import { useTypedSelector } from './../../hooks/useTypedSelector';
 
 interface IHeader { }
 
 const Header: FC<IHeader> = () => {
-    return (
-        <div className={styles.header}>
 
-            <NavLink to={'/'}><img src={LOGO} alt={LOGO} className={styles.logo} /></NavLink>
-            <div className={styles.userPanel}>
-                <div className={styles.cartUser}>
+    const { cart } = useTypedSelector(state => state.cart);
+    
+    return (
+        <div className={cl.header}>
+            <NavLink to={'/'}><img src={LOGO} alt={LOGO} className={cl.logo} /></NavLink>
+            <Search />
+            <div className={cl.userPanel}>
+                <div className={cl.cartUser}>
                     <Link to={'cart'}>
-                        <GrCart style={{width: '40px', height: '40px'}}/>
+                        <GrCart style={{ width: '30px', height: '30px' }} />
+                        <span>{cart.length}</span>
                     </Link>
                 </div>
             </div>
-
         </div>
     );
 };

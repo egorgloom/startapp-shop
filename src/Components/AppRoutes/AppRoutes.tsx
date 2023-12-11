@@ -1,7 +1,9 @@
 import { FC } from 'react';
 
 import { Route, Routes } from 'react-router-dom';
+
 import CartPage from '../Pages/CartPage';
+
 import Home from '../Pages/Home';
 
 import ProductItemPage from '../Pages/ProductItemPage';
