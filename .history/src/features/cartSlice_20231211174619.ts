@@ -1,6 +1,23 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { ICart, IProduct } from "../interfaces/interfaces";
 
+// interface ICart2 {
+//     cart: ICart[]
+// }
+
+// const initialState: ICart2 = {
+//     cart: []
+// }
+
+// interface TodoItem {
+//     quantity: number,
+//     id?: number | string,
+//     title?: string,
+//     price?: number,
+//     description?:string,
+//     image?: string,
+
+// }
 
 interface ICartState {
 
