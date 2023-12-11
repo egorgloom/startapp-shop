@@ -3,8 +3,9 @@ import { FC } from 'react';
 import { useGetProductsQuery } from '../../features/apiSlice';
 
 import { IProduct } from '../../interfaces/interfaces';
+import Loading from '../../UI/Loading/Loading';
 
-import Loading from '../../UI/Button/Loading/Loading';
+
 
 import ProductItem from '../Product/ProductItem';
 

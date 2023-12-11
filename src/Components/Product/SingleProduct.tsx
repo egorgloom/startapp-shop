@@ -7,7 +7,8 @@ import { useGetProductQuery } from '../../features/apiSlice';
 import { useActions } from '../../hooks/useActions';
 
 import Button from '../../UI/Button/Button';
-import Loading from '../../UI/Button/Loading/Loading';
+import Loading from '../../UI/Loading/Loading';
+
 
 import cl from './SingleProduct.module.scss'
 
