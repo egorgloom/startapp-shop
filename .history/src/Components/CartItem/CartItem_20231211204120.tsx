@@ -40,11 +40,10 @@ const CartItem: FC<ICartItem> = ({ elem }) => {
                     onClick={() => changeQuantity(elem, Math.max(1, elem.quantity + 1))} />
             </div>
             <span className={cl.price}>{Math.ceil((elem.price * elem.quantity))}$</span>
+
             <IoMdClose
-            style={{color: 'red',
-            width:'50px',
-            height: '50px',
-            cursor: 'pointer'}}
+            style={{color: 'red',width:'50px',
+            height: '50px'}}
                 onClick={() => removeToCart({id : elem.id})}
             />
 
