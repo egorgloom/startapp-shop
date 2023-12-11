@@ -40,7 +40,7 @@ const CartItem: FC<ICartItem> = ({ elem }) => {
             </div>
             <span className={cl.price}>{Math.ceil((elem.price * elem.quantity))}$</span>
             <FaRegWindowClose
-            style={{cursor: 'pointer', width: '20px', height: '20px'}}
+            style={{cursor: 'pointer'}}
                 onClick={() => removeToCart({id : elem.id})}
             />
         </div>
