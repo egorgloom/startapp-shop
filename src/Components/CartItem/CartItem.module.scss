@@ -45,6 +45,7 @@
 @media (max-width: 768px) { 
 
     .cartItem {
+
         a {
             img {
                 width: 50%;
@@ -66,8 +67,10 @@
 
 
     .cartItem {
+        padding: 0;
         gap: 15px;
         a {
+            flex-direction: column;
             img {
                 width: 30%;
                 height: 30%;
