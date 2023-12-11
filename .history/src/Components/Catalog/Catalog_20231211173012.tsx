@@ -16,11 +16,7 @@ interface ICatalog { }
 
 const Catalog: FC<ICatalog> = () => {
 
-  const { data, error} = useGetProductsQuery('');
-
-  if(error) {
-    return <div>Error</div>
-  }
+  const { data } = useGetProductsQuery('')
 
   return !data ? (<Loading title='Loading...' />) : (
     <div className={styles.catalogContainer}>
