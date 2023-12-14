@@ -2,20 +2,20 @@ import { FC } from 'react';
 
 import { Route, Routes } from 'react-router-dom';
 
-import CartPage from '../Pages/CartPage';
+import Catalog from './../Catalog/Catalog';
 
-import Home from '../Pages/Home';
+import Cart from './../Cart/Cart';
 
-import ProductItemPage from '../Pages/ProductItemPage';
+import SingleProduct from './../Product/SingleProduct';
 
 
 const AppRoutes: FC = () => {
     return (
         <>
             <Routes>
-                <Route index element={<Home />} />
-                <Route path='cart' element={<CartPage />} />
-                <Route path='product/:id' element={<ProductItemPage/>} />
+                <Route index element={<Catalog />} />
+                <Route path='cart' element={<Cart />} />
+                <Route path='product/:id' element={<SingleProduct/>} />
             </Routes>
         </>
     );

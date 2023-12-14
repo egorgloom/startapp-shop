@@ -2,7 +2,7 @@ import { FC } from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { usefulLinks, IFooter } from '../../interfaces/interfaces';
+import { usefulLinks, ISocialLink } from '../../interfaces/interfaces';
 
 import { socialLinks, usefulLink } from '../../utils/common';
 
@@ -14,7 +14,7 @@ const Footer: FC = () => {
 
     return (
         <footer className={styles.footer} >
-            <div className={styles.footerBlockInfo}>
+            <section className={styles.footerBlockInfo}>
                 <div>
                     <h3 className={styles.usefulLinks}>полезные ссылки</h3>
                     <hr />
@@ -29,7 +29,7 @@ const Footer: FC = () => {
                     <hr />
                     <p className={styles.lorem}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima fugiat error totam est mollitia magni exercitationem, eos hic libero ea, ipsa nulla! Impedit explicabo labore sapiente ullam incidunt rem. Voluptatem?</p>
                     <ul className={styles.footerLinks}>
-                        {socialLinks.map((elem: IFooter) =>
+                        {socialLinks.map((elem: ISocialLink) =>
                             <li key={elem.id}>
                                 <a href={elem.link} target='_blank' title={elem.title} rel="noreferrer">
                                     <img src={elem.icon} alt={elem.title} />
@@ -38,7 +38,7 @@ const Footer: FC = () => {
                         )}
                     </ul>
                 </div>
-            </div>
+            </section>
             <hr />
             <div className={styles.developer}>
                 <p className={styles.lorem}>Created by Egor Orlov</p>
