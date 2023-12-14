@@ -11,11 +11,11 @@ import { ICart } from '../../interfaces/interfaces';
 
 import cl from './CartItem.module.scss'
 
-interface ICartItem {
+interface IOrderItem {
     elem: ICart
 }
 
-const CartItem: FC<ICartItem> = ({ elem }) => {
+const OrderItem: FC<IOrderItem> = ({ elem }) => {
 
     const { addToCart, removeToCart } = useActions()
 
@@ -48,4 +48,4 @@ const CartItem: FC<ICartItem> = ({ elem }) => {
     );
 };
 
-export default CartItem;
+export default OrderItem;

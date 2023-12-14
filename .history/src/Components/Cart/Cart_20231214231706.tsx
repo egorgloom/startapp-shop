@@ -24,6 +24,8 @@ const Cart: FC = () => {
         cart.map((elem: ICart) => <OrderItem elem={elem} key={elem.id} />
         )
         : <div>Cart is empty</div>}
+
+
       <div className={cl.actions}>
         <div className={cl.total}>
           TOTAL PRICE:{" "}

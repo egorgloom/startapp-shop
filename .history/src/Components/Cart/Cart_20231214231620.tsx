@@ -6,7 +6,7 @@ import { ICart } from '../../interfaces/interfaces';
 
 import cl from './Cart.module.scss'
 
-import OrderItem from '../OrderItem/OrderItem';
+import OrderItem from '../CartItem/OrderItem';
 
 import Button from '../../UI/Button/Button';
 
@@ -24,6 +24,8 @@ const Cart: FC = () => {
         cart.map((elem: ICart) => <OrderItem elem={elem} key={elem.id} />
         )
         : <div>Cart is empty</div>}
+
+
       <div className={cl.actions}>
         <div className={cl.total}>
           TOTAL PRICE:{" "}
