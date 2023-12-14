@@ -28,7 +28,7 @@ const CartItem: FC<ICartItem> = ({ elem }) => {
         <div className={cl.cartItem}>
             <Link to={`/product/${elem.id}`}>
             <img src={elem.image} alt="productImage" />
-            <span className={cl.description}>{elem.description}</span>
+            <span className={cl.description}>{elem.title}</span>
             </Link>
             <div className={cl.quantity}>
                 <FaMinus
