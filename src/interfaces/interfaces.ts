@@ -14,3 +14,12 @@ export interface IRating {
 }
 
 export type ICart = Omit<IProduct, 'rating'>
+
+export interface IFooter {
+    id: number,
+    title: string,
+    link: string,
+    icon: string
+}
+
+export type usefulLinks = Omit<IFooter, 'link' | 'icon'>

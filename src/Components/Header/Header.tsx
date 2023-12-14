@@ -25,7 +25,7 @@ const Header: FC<IHeader> = () => {
             <div className={cl.userPanel}>
                 <div className={cl.cartUser}>
                     <Link to={'cart'}>
-                        <GrCart style={{ width: '30px', height: '30px' }} />
+                        <GrCart className={cl.GrCart} />
                         <span>{cart.length}</span>
                     </Link>
                 </div>

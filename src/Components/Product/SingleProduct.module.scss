@@ -50,6 +50,30 @@
     }
 }
 
+@media (max-width: 768px) {
+    
+.singleProduct {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+
+    .descriptionBlock {
+        align-items: center;
+
+
+        h3 {
+            text-align: center;
+        }
+
+        .description {
+            text-align: center;
+        }
+    }
+}
+
+}
+
 
 @media (max-width: 360px) { 
     .singleProduct {

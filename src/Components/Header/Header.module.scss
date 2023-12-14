@@ -24,10 +24,25 @@
 
         a {
             color: $white;
+
+            .GrCart {
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 
 
+}
+
+@media (max-width: 768px) {
+    .header { 
+        padding: 0 10px;
+        .logo {
+            width: 100px;
+            height: 52px;
+        }
+    }
 }
 
 

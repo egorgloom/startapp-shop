@@ -2,17 +2,16 @@ import { FC } from 'react';
 
 import { Link } from 'react-router-dom';
 
+import { usefulLinks, IFooter } from '../../interfaces/interfaces';
+
+import { socialLinks, usefulLink } from '../../utils/common';
+
 import styles from './Footer.module.scss'
 
 
-import YOUTUBE from '../../images/youtube.svg';
-import VK from '../../images/vk.svg';
-import FACEBOOK from '../../images/facebook.svg';
-import TELEGRAM from '../../images/telegram.svg';
-import EMAIL from '../../images/email.svg';
-
-
 const Footer: FC = () => {
+
+
     return (
         <footer className={styles.footer} >
             <div className={styles.footerBlockInfo}>
@@ -20,10 +19,9 @@ const Footer: FC = () => {
                     <h3 className={styles.usefulLinks}>полезные ссылки</h3>
                     <hr />
                     <ul className={styles.usefulLinksUl}>
-                        <Link to={'/'}><li>Доставка</li></Link>
-                        <Link to={'/'}><li>Оплата</li></Link>
-                        <Link to={'/'}><li>Акции</li></Link>
-                        <Link to={'/'}><li>Политика конфиденциальности</li></Link>
+                        {usefulLink.map((elem: usefulLinks) =>
+                            <Link to={'/'} key={elem.id}><li>{elem.title}</li></Link>
+                        )}
                     </ul>
                 </div>
                 <div>
@@ -31,31 +29,13 @@ const Footer: FC = () => {
                     <hr />
                     <p className={styles.lorem}>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima fugiat error totam est mollitia magni exercitationem, eos hic libero ea, ipsa nulla! Impedit explicabo labore sapiente ullam incidunt rem. Voluptatem?</p>
                     <ul className={styles.footerLinks}>
-                        <li>
-                            <a href="https://www.youtube.com/" target='_blank' title='Наш YouTube' rel="noreferrer">
-                                <img src={YOUTUBE} alt="YOUTUBE" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://vk.com/feed" target='_blank' title='Наш VK' rel="noreferrer">
-                                <img src={VK} alt="VK" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/" target='_blank' title='Наш Facebook' rel="noreferrer">
-                                <img src={FACEBOOK} alt="FACEBOOK" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://telegram.org/" target='_blank' title='Наш Telegram' rel="noreferrer">
-                                <img src={TELEGRAM} alt="TELEGRAM" />
-                            </a>
-                        </li>
-                        <li>
-                            <a href="mailto: ojjo@ojjo.ru" target='_blank' title='Написать нам на наш E-mail' rel="noreferrer">
-                                <img src={EMAIL} alt="EMAIL" />
-                            </a>
-                        </li>
+                        {socialLinks.map((elem: IFooter) =>
+                            <li key={elem.id}>
+                                <a href={elem.link} target='_blank' title={elem.title} rel="noreferrer">
+                                    <img src={elem.icon} alt={elem.title} />
+                                </a>
+                            </li>
+                        )}
                     </ul>
                 </div>
             </div>

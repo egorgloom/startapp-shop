@@ -22,6 +22,7 @@
         h3 {
             font-size: $fs18;
             color: $lightBlack;
+            word-wrap: break-word;
         }
 
         img {
@@ -35,6 +36,12 @@
             font-weight: 600;
             font-size: $fs20;
         }
+    }
+}
+
+@media (max-width: 768px) {
+    .productItem {
+        width: calc((100% / 2) - 20px);
     }
 }
 

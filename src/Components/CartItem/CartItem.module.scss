@@ -10,7 +10,7 @@
         display: flex;
         align-items: center;
         width: 50%;
-        
+
 
         img {
             width: 10%;
@@ -40,9 +40,16 @@
         font-size: $fs20;
         color: $lightBlack;
     }
+
+    .IoMdClose {
+        color: red;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
 }
 
-@media (max-width: 768px) { 
+@media (max-width: 768px) {
 
     .cartItem {
 
@@ -51,7 +58,7 @@
                 width: 50%;
                 height: 50%;
             }
-    
+
             .description {
                 font-size: $fs12;
                 width: 70%;
@@ -69,13 +76,15 @@
     .cartItem {
         padding: 0;
         gap: 15px;
+
         a {
             flex-direction: column;
+
             img {
                 width: 30%;
                 height: 30%;
             }
-    
+
             .description {
                 display: none;
             }
